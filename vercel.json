@@ -1,6 +1,17 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/pages/index.html" },
+
+    { "source": "/sobre", "destination": "/pages/sobrenos.html" },
+    { "source": "/box", "destination": "/pages/box.html" },
+    { "source": "/espelho", "destination": "/pages/espelho.html" },
+    { "source": "/porta", "destination": "/pages/porta.html" },
+    { "source": "/corrimao", "destination": "/pages/corrimao.html" },
+    { "source": "/guardacorpo", "destination": "/pages/guardacorpo.html" },
+    { "source": "/janela", "destination": "/pages/janela.html" },
+    { "source": "/sacada", "destination": "/pages/sacada.html" },
+    { "source": "/cobertura", "destination": "/pages/cobertura.html" },
+
     { "source": "/index.html", "destination": "/pages/index.html" },
     { "source": "/sobrenos.html", "destination": "/pages/sobrenos.html" },
     { "source": "/box.html", "destination": "/pages/box.html" },
