@@ -1,12 +1,15 @@
 {
   "rewrites": [
-    {
-      "source": "/",
-      "destination": "/pages/index.html"
-    },
-    {
-      "source": "/:page.html",
-      "destination": "/pages/:page.html"
-    }
+    { "source": "/", "destination": "/pages/index.html" },
+    { "source": "/index.html", "destination": "/pages/index.html" },
+    { "source": "/sobrenos.html", "destination": "/pages/sobrenos.html" },
+    { "source": "/box.html", "destination": "/pages/box.html" },
+    { "source": "/espelho.html", "destination": "/pages/espelho.html" },
+    { "source": "/porta.html", "destination": "/pages/porta.html" },
+    { "source": "/corrimao.html", "destination": "/pages/corrimao.html" },
+    { "source": "/guardacorpo.html", "destination": "/pages/guardacorpo.html" },
+    { "source": "/janela.html", "destination": "/pages/janela.html" },
+    { "source": "/sacada.html", "destination": "/pages/sacada.html" },
+    { "source": "/cobertura.html", "destination": "/pages/cobertura.html" }
   ]
 }
