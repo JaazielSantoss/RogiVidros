@@ -1036,7 +1036,7 @@ LIGHTBOX
     }
 
     header {
-        height: 30px;
+        height: auto;
     }
 
     main {
@@ -1391,7 +1391,7 @@ LIGHTBOX
     }
 
     header {
-        height: 30px;
+        height: auto;
     }
 
     main {
