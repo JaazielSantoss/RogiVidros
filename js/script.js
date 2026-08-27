@@ -305,7 +305,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             lightbox.classList.add('active');
             lightboxImg.src = img.src;
-            caption.textContent = img.alt || "";
 
         });
 
