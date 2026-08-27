@@ -33,7 +33,7 @@ html {
 HEADER
 ========================= */
 header {
-    height: 70px;
+    height: auto;
     background-color: #a70000;
     position: fixed;
     top: 0;
@@ -1068,7 +1068,7 @@ LIGHTBOX
     }
 
     header {
-        height: 30px;
+        height: auto;
     }
 
     main {
@@ -1423,7 +1423,7 @@ LIGHTBOX
     }
 
     header {
-        height: 30px;
+        height: auto;
     }
 
     main {
