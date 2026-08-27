@@ -435,16 +435,6 @@ LIGHTBOX
     inset: 0;
 }
 
-.lightbox-caption {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    background: rgba(0, 0, 0, .4);
-    padding: 8px 14px;
-    border-radius: 8px;
-}
 
 .contato-localizacao {
     background-image: url('../img/fundopretoecinza.svg');
