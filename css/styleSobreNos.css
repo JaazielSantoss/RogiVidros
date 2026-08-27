@@ -1,0 +1,1524 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+RESET E BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 15px;
+}
+
+/* =========================
+HEADER
+========================= */
+header {
+    height: 70px;
+    background-color: #a70000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.logo img {
+    width: 150px;
+    display: block;
+    margin-left: -25px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: black;
+    border-bottom: 2px solid white;
+}
+
+main {
+    padding-top: 10px;
+}
+
+/* =========================
+BOTÃO MENU (mobile)
+========================= */
+.menu-toggle {
+    display: none;
+    transition: 0.3s ease;
+}
+
+.menu-servicos {
+    position: relative;
+}
+
+.submenu-servicos {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 220px;
+    padding: 15px 0;
+
+    background-color: #a70000;
+    border-radius: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s ease;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+}
+
+.menu-servicos:hover .submenu-servicos {
+    opacity: 1;
+    visibility: visible;
+}
+
+.submenu-servicos a {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.submenu-servicos a:hover {
+    background: rgba(255, 255, 255, .15);
+}
+
+
+/* =========================
+WHATSAPP FIXO
+========================= */
+.whatsapp-fixo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    border-radius: 50%;
+    animation: whatsapp-pulse 1.8s ease-in-out infinite;
+}
+
+.whatsapp-fixo img {
+    width: 60px;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.whatsapp-fixo:hover {
+    transform: translateY(-6px);
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 0 0 8px rgba(37, 211, 102, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 0 0 24px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
+    }
+}
+
+/* =========================
+BANNER
+========================= */
+.banner-sobrenos {
+    min-height: 70vh;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.banner-sobrenos-conteudo {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.sobre-imagem img {
+    width: 550px;
+    max-width: 100%;
+    display: block;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+.sobre-texto {
+    color: white;
+    max-width: 600px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.sobre-texto p {
+    font-size: 27px;
+    line-height: 1.6;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+
+.canto-direito {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    width: 220px;
+    z-index: 1;
+}
+
+.nossa-missao {
+    min-height: 100vh;
+    background-image: url('../img/sobreNos/fundomissao.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+.titulo-missao h2 {
+    font-size: 70px;
+    color: white;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.titulo-missao span {
+    color: #f5d328;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.titulo-missao span img {
+    width: 260px;
+    margin-left: -10px;
+}
+
+.titulo-missao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.card-missao {
+    max-width: 650px;
+    background-color: #b8241d;
+    padding: 50px;
+    border-radius: 120px 20px 120px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-missao p {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.nossa-visao {
+    min-height: 100vh;
+    background-image: url('../img/sobreNos/fundovisao.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    margin-top: -1px;
+}
+
+.titulo-visao h2 {
+    font-size: 70px;
+    color: white;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.titulo-visao span {
+    color: #f5d328;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.titulo-visao span img {
+    width: 260px;
+    margin-left: -10px;
+}
+
+.titulo-visao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.card-visao {
+    max-width: 650px;
+    background-color: #b8241d;
+    padding: 50px;
+    border-radius: 20px 120px 20px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-visao p {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.nossos-valores {
+    min-height: 100vh;
+    background-image: url('../img/sobreNos/fundovalores.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    margin: -2px;
+}
+
+.titulo-valores h2 {
+    font-size: 70px;
+    color: white;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.titulo-valores span {
+    color: #f5d328;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.titulo-valores span img {
+    width: 260px;
+    margin-left: -10px;
+}
+
+.titulo-valores {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.card-valores {
+    max-width: 650px;
+    background-color: #b8241d;
+    padding: 50px;
+    border-radius: 120px 20px 120px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-valores p {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contato-localizacao {
+    background-image: url('../img/fundopretoecinza.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 45px 90px 70px;
+    color: white;
+    margin: -1px;
+}
+
+.siga-nos {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.siga-nos-topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.siga-nos-topo h2 {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.siga-nos-topo a {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.siga-nos-topo a:hover {
+    transform: scale(1.05);
+}
+
+.siga-nos-topo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    pointer-events: auto;
+    transform: translateY(4px);
+    animation: instagram-vai-vem 1.6s ease-in-out infinite;
+}
+
+@keyframes instagram-vai-vem {
+
+    0%,
+    100% {
+        transform: translatey(4px) scale(1);
+    }
+
+    50% {
+        transform: translateY(4px) scale(1.12);
+    }
+}
+
+.siga-nos p {
+    margin-top: -20px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.contato-localizacao-conteudo {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.contato-bloco h2 {
+    color: #ffea2f;
+    font-size: 42px;
+    margin-bottom: 28px;
+}
+
+.contato-lista li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.mapa-bloco h2 {
+    color: #ffea2f;
+    font-size: 28px;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.mapa-frame {
+    width: 100%;
+    height: 345px;
+    background: #222;
+    overflow: hidden;
+}
+
+.mapa-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.contato-bloco h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.contato-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.contato-lista img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.contato-lista a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #111;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* MENU MOBILE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 38px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #a70000;
+        flex-direction: column;
+        align-items: center;
+        width: 220px;
+        padding: 15px 0;
+        border-radius: 10px;
+
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .menu-toggle:hover {
+        transform: scale(1.1);
+        color: black;
+    }
+
+    .header-container {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 130px;
+        margin-left: -10px;
+    }
+}
+
+/* TABLET VERTICAL */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        line-height: 1;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #a70000;
+        flex-direction: column;
+        align-items: center;
+        width: 120px;
+        padding: 10px 0;
+        border-radius: 10px;
+        gap: 3px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    .menu-servicos {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-servicos>a {
+        display: block;
+        width: 100%;
+        padding: 6px 8px;
+    }
+
+    .submenu-servicos {
+        position: static;
+        transform: none;
+
+        display: none;
+
+        width: 100%;
+        min-width: 100%;
+
+        margin-top: 5px;
+
+        border-radius: 10px;
+        box-shadow: none;
+
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .submenu-servicos.active {
+        display: flex;
+    }
+
+    .submenu-servicos a {
+        width: 100%;
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    /* =========================
+TABLET VERTICAL
+========================= */
+
+
+    /* BANNER */
+
+    .banner-sobrenos-conteudo {
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 40px;
+    }
+
+
+    .sobre-imagem img {
+        width: 450px;
+    }
+
+
+    .sobre-texto {
+        max-width: 650px;
+        margin: 30px auto;
+    }
+
+
+    .sobre-texto p {
+        font-size: 24px;
+    }
+
+
+    /* DECORAÇÃO */
+
+    .canto-direito {
+        width: 170px;
+    }
+
+
+    /* SECTIONS */
+
+    .nossa-missao,
+    .nossa-visao,
+    .nossos-valores {
+        padding: 80px 60px;
+    }
+
+
+    .titulo-missao h2,
+    .titulo-visao h2,
+    .titulo-valores h2 {
+        font-size: 65px;
+    }
+
+
+    .card-missao,
+    .card-visao,
+    .card-valores {
+        max-width: 550px;
+    }
+
+
+    .card-missao p,
+    .card-visao p,
+    .card-valores p {
+        font-size: 22px;
+    }
+
+    .contato-localizacao {
+        padding: 50px 30px;
+    }
+
+    .siga-nos-topo h2 {
+        font-size: 36px;
+    }
+
+    .siga-nos p {
+        font-size: 22px;
+    }
+
+    .contato-bloco h2 {
+        font-size: 30px;
+    }
+
+    .contato-bloco h3 {
+        font-size: 22px;
+    }
+
+    .mapa-frame {
+        height: 350px;
+    }
+}
+
+/* TABLET HORIZONTAL */
+@media (min-width: 900px) and (max-width: 1400px) and (orientation: landscape) {
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        line-height: 1;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #a70000;
+        flex-direction: column;
+        align-items: center;
+        width: 120px;
+        padding: 10px 0;
+        border-radius: 10px;
+        gap: 3px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    .menu-servicos {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-servicos>a {
+        display: block;
+        width: 100%;
+        padding: 6px 8px;
+    }
+
+    .submenu-servicos {
+        position: static;
+        transform: none;
+
+        display: none;
+
+        width: 100%;
+        min-width: 100%;
+
+        margin-top: 5px;
+
+        border-radius: 10px;
+        box-shadow: none;
+
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .submenu-servicos.active {
+        display: flex;
+    }
+
+    .submenu-servicos a {
+        width: 100%;
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    /* =========================
+TABLET HORIZONTAL
+========================= */
+
+
+    /* BANNER */
+
+    .banner-sobrenos-conteudo {
+        padding: 50px;
+    }
+
+
+    .sobre-imagem img {
+        width: 450px;
+    }
+
+
+    .sobre-texto {
+        max-width: 500px;
+    }
+
+
+    .sobre-texto p {
+        font-size: 24px;
+    }
+
+
+    /* DECORAÇÃO */
+
+    .canto-direito {
+        width: 180px;
+    }
+
+
+    /* SECTIONS */
+
+    .nossa-missao,
+    .nossa-visao,
+    .nossos-valores {
+        padding: 0 5%;
+    }
+
+
+    .titulo-missao h2,
+    .titulo-visao h2,
+    .titulo-valores h2 {
+        font-size: 60px;
+    }
+
+
+    .titulo-missao span img,
+    .titulo-visao span img,
+    .titulo-valores span img {
+        width: 220px;
+    }
+
+
+    .card-missao,
+    .card-visao,
+    .card-valores {
+        max-width: 500px;
+        padding: 45px;
+    }
+
+
+    .card-missao p,
+    .card-visao p,
+    .card-valores p {
+        font-size: 22px;
+    }
+
+    .contato-localizacao {
+        padding: 50px 40px;
+    }
+
+    .contato-localizacao-conteudo {
+        gap: 50px;
+    }
+
+    .siga-nos-topo h2 {
+        font-size: 38px;
+    }
+
+    .siga-nos p {
+        font-size: 22px;
+    }
+
+    .contato-bloco h2 {
+        font-size: 30px;
+    }
+
+    .contato-bloco h3 {
+        font-size: 22px;
+    }
+
+    .mapa-frame {
+        height: 350px;
+    }
+}
+
+/* CELULAR VERTICAL */
+@media (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {
+
+
+    .menu-servicos {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-servicos>a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .submenu-servicos {
+        position: static;
+        transform: none;
+        display: none;
+        width: 100%;
+        min-width: 100%;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    .submenu-servicos {
+        display: none;
+    }
+
+    .submenu-servicos.active {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .submenu-servicos a {
+        font-size: 13px;
+        padding: 6px 4px;
+    }
+
+    header {
+        height: 30px;
+    }
+
+    main {
+        padding-top: 30px;
+    }
+
+    .header-container {
+        padding: 5px 15px;
+    }
+
+    .logo img {
+        width: 95px;
+        margin-left: 3px;
+    }
+
+    .menu-toggle {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    nav {
+        top: 30px;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        line-height: 1;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        background-color: #a70000;
+        flex-direction: column;
+        align-items: center;
+        width: 120px;
+        padding: 10px 0;
+        border-radius: 10px;
+        gap: 3px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    /* banner */
+
+    .banner-sobrenos-conteudo {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 80vh;
+        padding: 80px 20px 30px;
+    }
+
+    .sobre-imagem {
+        order: 1;
+    }
+
+    .sobre-texto {
+        order: 2;
+        margin: 20px 10px 0;
+        text-align: center;
+        max-width: 350px;
+    }
+
+    .sobre-imagem img {
+        width: 280px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .sobre-texto p {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 700;
+    }
+
+    .canto-direito {
+        display: none;
+    }
+
+    /*missao */
+
+    .nossa-missao {
+        min-height: auto;
+        padding: 70px 25px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .titulo-missao {
+        align-items: center;
+    }
+
+    .titulo-missao h2 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .titulo-missao span img {
+        width: 160px;
+        margin: auto 0;
+    }
+
+    .card-missao {
+        width: 100%;
+        max-width: 100%;
+        padding: 35px 25px;
+        border-radius: 70px 15px 70px 15px;
+    }
+
+    .card-missao p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* VISÃO */
+
+    .nossa-visao {
+        min-height: auto;
+        padding: 70px 25px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+
+    .titulo-visao {
+        align-items: center;
+    }
+
+
+    .titulo-visao h2 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+
+    .titulo-visao span img {
+        width: 160px;
+        margin: auto 0;
+    }
+
+
+    .card-visao {
+        width: 100%;
+        max-width: 100%;
+        padding: 35px 25px;
+        border-radius: 15px 70px 15px 70px;
+    }
+
+
+    .card-visao p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* VALORES */
+
+    .nossos-valores {
+        min-height: auto;
+        padding: 70px 25px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+
+    .titulo-valores {
+        align-items: center;
+    }
+
+
+    .titulo-valores h2 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+
+    .titulo-valores span img {
+        width: 160px;
+        margin: auto 0;
+    }
+
+
+    .card-valores {
+        width: 100%;
+        max-width: 100%;
+        padding: 35px 25px;
+        border-radius: 70px 15px 70px 15px;
+    }
+
+
+    .card-valores p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* contato e localização */
+
+    .contato-localizacao {
+        padding: 35px 20px;
+    }
+
+    .siga-nos {
+        margin-bottom: 40px;
+    }
+
+    .siga-nos-topo {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .siga-nos-topo h2 {
+        font-size: 28px;
+    }
+
+    .siga-nos p {
+        margin-top: 5px;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .siga-nos a img {
+        margin-left: 50px;
+    }
+
+    .contato-localizacao-conteudo {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contato-bloco h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .contato-bloco h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .contato-lista li {
+        font-size: 17px;
+        gap: 12px;
+    }
+
+    .contato-lista img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .mapa-bloco h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .mapa-frame {
+        height: 250px;
+    }
+
+    /* footer */
+
+    .footer p {
+        padding-bottom: 30px;
+    }
+}
+
+/* CELULAR HORIZONTAL */
+@media (min-width: 568px) and (max-width: 932px) and (orientation: landscape) {
+
+    .whatsapp-fixo {
+        z-index: 9999;
+    }
+
+    .whatsapp-fixo.oculto-menu {
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+
+    nav a {
+        padding: 6px 8px;
+        font-size: 14px;
+        line-height: 1.1;
+    }
+
+
+    .menu-servicos {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-servicos>a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .submenu-servicos {
+        position: static;
+        transform: none;
+        display: none;
+        width: 100%;
+        min-width: 100%;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    .submenu-servicos {
+        display: none;
+    }
+
+    .submenu-servicos.active {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .submenu-servicos a {
+        font-size: 13px;
+        padding: 6px 4px;
+    }
+
+    .whatsapp-fixo img {
+        width: 50px;
+        transition: 0.3s ease;
+    }
+
+    .whatsapp-fixo img {
+        width: 50px;
+        transition: 0.3s ease;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        line-height: 1;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        background-color: #a70000;
+        flex-direction: column;
+        align-items: center;
+        width: 120px;
+        padding: 10px 0;
+        border-radius: 10px;
+        gap: 3px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    header {
+        height: 30px;
+    }
+
+    main {
+        padding-top: 30px;
+    }
+
+    .header-container {
+        padding: 5px 15px;
+    }
+
+    .logo img {
+        width: 95px;
+        padding-left: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        background-color: #a70000;
+        flex-direction: column;
+        width: 120px;
+        padding: 10px 0;
+        border-radius: 10px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    /* BANNER */
+
+    .banner-sobrenos-conteudo {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0px 20px 30px;
+    }
+
+
+    .sobre-imagem img {
+        width: 300px;
+        margin: 40px 20px 0 0;
+    }
+
+
+    .sobre-texto {
+        max-width: 400px;
+        margin: 40px 0 0 20px;
+    }
+
+
+    .sobre-texto p {
+        font-size: 18px;
+    }
+
+
+    /* DECORAÇÃO */
+
+    .canto-direito {
+        display: none;
+    }
+
+
+    /* MISSÃO / VISÃO / VALORES */
+
+    .nossa-missao,
+    .nossa-visao,
+    .nossos-valores {
+        min-height: auto;
+        padding: 70px 40px;
+        gap: 40px;
+    }
+
+
+    .titulo-missao h2,
+    .titulo-visao h2,
+    .titulo-valores h2 {
+        font-size: 55px;
+    }
+
+
+    .titulo-missao span img,
+    .titulo-visao span img,
+    .titulo-valores span img {
+        width: 180px;
+    }
+
+
+    .card-missao,
+    .card-visao,
+    .card-valores {
+        max-width: 420px;
+        padding: 35px;
+    }
+
+
+    .card-missao p,
+    .card-visao p,
+    .card-valores p {
+        font-size: 19px;
+    }
+
+
+    .contato-localizacao {
+        padding: 35px 40px;
+    }
+
+    .contato-localizacao-conteudo {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .siga-nos-topo h2 {
+        font-size: 32px;
+    }
+
+    .siga-nos p {
+        font-size: 22px;
+    }
+
+    .mapa-frame {
+        height: 300px;
+    }
+}
