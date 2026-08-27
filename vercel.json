@@ -10,7 +10,7 @@
     { "source": "/guardacorpo.html", "destination": "/pages/guardacorpo.html" },
     { "source": "/janela.html", "destination": "/pages/janela.html" },
     { "source": "/sacada.html", "destination": "/pages/sacada.html" },
-    { "source": "/cobertura.html", "destination": "/pages/cobertura.html" }
+    { "source": "/cobertura.html", "destination": "/pages/cobertura.html" },
     { "cleanUrls": true }
   ]
 }
