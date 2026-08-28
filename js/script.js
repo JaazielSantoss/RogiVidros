@@ -331,6 +331,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+/* CONTATO - rolagem suave sem alterar a URL */
+
+document.querySelectorAll('.link-contato').forEach(link => {
+
+    link.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        const contato = document.getElementById('contato-localizacao');
+
+        if (contato) {
+            contato.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+    });
+
+});
+
 /*
 document.addEventListener("DOMContentLoaded", () => {
 
